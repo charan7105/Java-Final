@@ -1,6 +1,7 @@
 import java.util.*;
 public class addingno {
     public static void main(String[] args) {
+        System.out.println("Enter the value of N"); 
         Scanner sc = new Scanner(System.in);
         int n = sc.nextInt();
         int sum = 0;
