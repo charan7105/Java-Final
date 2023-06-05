@@ -7,7 +7,7 @@ public class printnnumbs {
         int n = sc.nextInt();
         int i = 1;
         while (i<=n) {
-            System.out.println(i);
+            System.out.println("Nuvvu Erri Puvvu");
             i++;
         }
     }
