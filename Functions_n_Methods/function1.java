@@ -9,7 +9,7 @@ public class function1 {
     }
     public static void main(String args[])
     {
-        Scanner sc = new Scanner(System.in); //Actual Parameters or Arguments
+        Scanner sc = new Scanner(System.in); //Parameters or Formal Parameters
         int a = sc.nextInt();
         int b = sc.nextInt();
         int sum = calculatesum(a, b);
