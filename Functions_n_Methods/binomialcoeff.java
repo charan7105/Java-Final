@@ -25,6 +25,8 @@ public class binomialcoeff {
         int binarycoeffcient = n_fac / (r_fac*nr_fac);
         System.out.println("The Answer is = "+binarycoeffcient);
         return binarycoeffcient;
+        // System.out.println("a= "+a);
+        // System.out.println("b= "+b);
     }
 
     // ----------------------------------------------
