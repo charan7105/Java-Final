@@ -21,7 +21,7 @@ public class binarysearch {
     
     public static void main(String[] args) {
         int Numbers[] = {1,2,6,52,62,12,44,23,53,92};
-        Arrays.sort(Numbers); 
+        Arrays.sort(Numbers);
         //It will Sort the Array !! and make binary search possible.
         int key = 44;
 

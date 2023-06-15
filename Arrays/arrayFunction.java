@@ -2,7 +2,7 @@
 
 import java.util.Scanner;
 
-public class arraymethod {
+public class arrayFunction {
 
     public static void arraychange(int marks[]) {
         for(int i=0; i<marks.length;i++)
