@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class reversearray {
     public static void ReverseArray(int Numbers[]) {
         int start = 0;
-        int last = Numbers.length;
+        int last = Numbers.length-1;
 
         while(start<last){
             int temp = Numbers[start];
@@ -21,7 +21,7 @@ public class reversearray {
         ReverseArray(Numbers);
 
         for(int i=0;i<Numbers.length;i++){
-            System.out.println(Numbers[i]+" ");
+            System.out.print(Numbers[i]+" ");
         }
         System.out.println(" ");
     }
