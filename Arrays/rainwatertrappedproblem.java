@@ -1,6 +1,7 @@
 public class rainwatertrappedproblem {
     public static void TrappedWater(int Height[]){
         int TrappedWater = 0;
+
         //Max of left 
         int MaxLeft[] = new int[Height.length];
         MaxLeft[0]=Height[0];
@@ -31,26 +32,25 @@ public class rainwatertrappedproblem {
         }
         // System.out.println();
         
-        
-
         //for loop
         for(int i=0;i<Height.length;i++){
+            //Min of Left and Right
             if(MaxRight[i]<MaxLeft[i]){
+                //TrappedWater = (WaterLevel - BuildingHeight)
                 TrappedWater += MaxRight[i] - Height[i];
             }else{
+                //TrappedWater = (WaterLevel - BuildingHeight
                 TrappedWater += MaxLeft[i]-Height[i];
             }
             System.out.println("The Water Trapped till the building no:"+(i+1)+" is "+TrappedWater);
         }
         System.out.println();
-        System.out.println("So, Total Water is :"+TrappedWater);
-        //Min of Left and Right
-        //TrappedWater = (WaterLevel - BuildingHeight)
         // System.out.println("The Full ")
+        System.out.println("So, Total Water is :"+TrappedWater);
    }
+   
     public static void main(String[] args){
         int Height[] = {4,2,0,6,3,2,5};
         TrappedWater(Height);
     }
-
  }
