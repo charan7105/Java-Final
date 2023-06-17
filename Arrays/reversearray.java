@@ -17,7 +17,7 @@ public class reversearray {
     }
     public static void main(String[] args){
         int Numbers[] = {1,2,6,52,62,12,44,23,53,92};
-        Arrays.sort(Numbers);
+        // Arrays.sort(Numbers);
 
         ReverseArray(Numbers);
 

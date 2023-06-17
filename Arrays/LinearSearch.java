@@ -1,4 +1,4 @@
-import java.security.Key;
+// import java.security.Key;
 import java.util.Scanner;
 
 public class LinearSearch {
