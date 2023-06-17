@@ -2,7 +2,8 @@ import java.util.Arrays;
 
 public class binarysearch {
     public static int binarySearch(int Numbers[], int key) {
-        int start = 0; int end = Numbers.length-1;
+        int start = 0; 
+        int end = Numbers.length-1;
         //This is where i made error -1
         while(start <= end)
         {
