@@ -1,36 +1,36 @@
 public class maxsubarrayprefix {
+    public static void findMaxSubarraySum(int[] numbers) {
+        int maxSum = Integer.MIN_VALUE;
+        int[] prefix = new int[numbers.length];
 
-    public static void SubArray(int Numbers[]){
-        int curr = 0;
-        int MaxArr = Integer.MIN_VALUE;
-        int Prefix[] = new int[Numbers.length];
-
-        for(int i=0;i<Prefix.length;i++){
-            //Calc Prefix Array
-            Prefix[i] = Prefix[i-1] + Numbers[i];
+        // Calculate Prefix Array
+        prefix[0] = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            prefix[i] = prefix[i - 1] + numbers[i];
         }
 
-        for(int i=0; i <Numbers.length; i++){
-            int start = i;
-            for(int j=i; j<Numbers.length;j++){
-                int end = j;
-                curr = start == 0 ? Prefix[end]: Prefix[end] - Prefix[start-1];
-                for(int k=start; k<=end; k++){
-                    // System.out.print(Numbers[k]+" ");
-                    curr += Numbers[k];
+        // The method findmaxsubarraysum takes an array of numbers and finds the maximum subarray sum using the prefix sum array.
+        // The prefix array is calculated to store the cumulative sums of the input numbers.
+        // The outer loop iterates over the possible starting indices of the subarray.
+        // The inner loop calculates the sum of the subarray using the prefix sum array and updates the maximum sum if necessary.
+        // Finally, the maximum subarray sum is printed.
+
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = i; j < numbers.length; j++) {
+                int curr = prefix[j] - (i > 0 ? prefix[i - 1] : 0);
+                if (curr > maxSum) {
+                    maxSum = curr;
                 }
-                // System.out.println(MaxArr);
-                if(curr>MaxArr){
-                        MaxArr = curr;
-                    }
             }
         }
-        System.out.println(MaxArr);
+
+        System.out.println("Max Subarray Sum: " + maxSum);
+                
 
     }
-    public static void main(String[] args) {
-        int Numbers[] = {1,21,-23,12,213,12,-21};
 
-        SubArray(Numbers);
+    public static void main(String[] args) {
+        int[] numbers = {1, 21, -23, 12, 213, 12, -21};
+        findMaxSubarraySum(numbers);
     }
 }
