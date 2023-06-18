@@ -1,23 +1,25 @@
-import java.util.*;
+import java.util.Scanner;
+
 public class ArrayTwice {
-    public static void ArrayTwiceFind(int Numbers[]){
-        for(int i=0;i<Numbers.length;i++){
-            for(int j=i+1;j<Numbers.length;j++){
-                if(Numbers[i] == Numbers[j]){
+    public static void arrayTwiceFind(int[] numbers) {
+        for (int i = 0; i < numbers.length; i++) {
+            for (int j = i + 1; j < numbers.length; j++) {
+                if (numbers[i] == numbers[j]) {
                     System.out.println("Yes");
-                }else{System.out.println("No");}
+                    return;
+                }
             }
         }
+        System.out.println("No");
     }
-    public static void main(String[] args){
+
+    public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int Numbers[] = new int[5];
-        for(int i=0;i<Numbers.length;i++){
-            System.out.print("Enter the Number at index:"+i+" => ");
-            Numbers[i] = sc.nextInt();
+        int[] numbers = new int[5];
+        for (int i = 0; i < numbers.length; i++) {
+            System.out.print("Enter the number at index " + i + ": ");
+            numbers[i] = sc.nextInt();
         }
-        // System.out.println(Numbers);
-        // It wont get output it will generate the meemory address insted.
-        ArrayTwiceFind(Numbers);
+        arrayTwiceFind(numbers);
     }
 }
