@@ -2,7 +2,7 @@ public class subarray {
     public static void SubArray(int Numbers[]) {
         for(int i=0;i<Numbers.length;i++){
             int start = i;
-            for(int j=i;j<Numbers.length;j++){
+            for(int j=i;j<Numbers.length;j++) {
                 int end = j;
                 //K is equal to end because it need to print min of one array. 
                 // Example => i=0; j=0; So now it will check to K
