@@ -34,4 +34,3 @@ public class binarysearch {
         searching(Numbers, key);
     }
 }
-
