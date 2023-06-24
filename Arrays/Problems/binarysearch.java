@@ -31,6 +31,7 @@ public class binarysearch {
         System.out.print("Enter the key: ");
         int key = sc.nextInt();
 
+        //Now Call the Method
         searching(Numbers, key);
     }
 }
