@@ -23,11 +23,17 @@ public class spiral {
 
             //Bottom Print ki 
             for(int j=EndColumn-1;j>=StartColumn;j--){
+                if(StartRow==EndRow){
+                    break;
+                }
                 System.out.print(numbers[EndRow][j]+" ");
             }
 
             //Left Boundary print ki 
             for(int i=EndRow-1;i>=StartRow+1;i--){
+                if(StartColumn==EndColumn){
+                    break;
+                }
                 System.out.print(numbers[i][StartColumn]+" ");
             }
 
