@@ -22,7 +22,7 @@ public class spiral {
             }
 
             //Bottom Print ki 
-            for(int j=EndColumn-1;j>=0;j--){
+            for(int j=EndColumn-1;j>=StartColumn;j--){
                 System.out.print(numbers[EndRow][j]+" ");
             }
 
