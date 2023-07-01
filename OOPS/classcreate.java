@@ -7,9 +7,22 @@ public class classcreate {
     p1.ChangeColor("Yellow");
     //This method is responsible for changing the color of the pen
     System.out.println(p1.Color);
+
+    BankAccount acc1 = new BankAccount();
+
+    acc1.UserName = "SaiCharan";
+    acc1.SetPassWord("sdfsdf");
    }
 }
 
+class BankAccount{
+    public String UserName;
+    private String PassWord;
+    
+    public void SetPassWord(String NewPassWord){
+        PassWord = NewPassWord;
+    }
+}
 class pen{
 //Pen Class it has its own properties
     String Color;
