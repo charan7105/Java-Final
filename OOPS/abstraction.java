@@ -9,16 +9,16 @@ public class abstraction {
 }
 
 abstract class Animal{
-    void Eat(){
-        System.out.println("Yeah, This Can Eat the Food to Live 🍉");
-    }
-
     abstract void legs();
 }
 
 class Horse extends Animal{
     void legs(){
         System.out.println("It has 4 Legs");
+    }
+    
+    void Eat(){
+        System.out.println("Yeah, This Can Eat the Food to Live");
     }
 }
 
