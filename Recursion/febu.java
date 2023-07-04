@@ -13,7 +13,7 @@ public class febu {
     }
     
     public static void main(String[] args){
-        int n = 5;
+        int n = 14;
         System.out.print(feb(n));
     }
 }
