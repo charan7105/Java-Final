@@ -14,6 +14,8 @@ public class febu {
     
     public static void main(String[] args){
         int n = 14;
-        System.out.print(feb(n));
+        System.out.print(feb(23));
+        // System.out.print(feb(56));
+        // System.out.print(feb(57));
     }
 }
