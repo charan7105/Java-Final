@@ -5,7 +5,7 @@ public class tilingproblem8
     
     public static int ways(int n)
     { //2 * N Floor Size
-        //Base 
+        //Base  
         if(n==0 || n==1)
         {
             return 1;
