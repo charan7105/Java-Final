@@ -1,5 +1,5 @@
 import java.util.Scanner;
-
+//Lab Problem
 public class faclastno {
 
     public static void factorial(int n) {
