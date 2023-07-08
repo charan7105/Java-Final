@@ -1,4 +1,5 @@
 package divideandconquer;
+import java.util.*;
 
 public class mergesort1 {
 
@@ -10,6 +11,7 @@ public class mergesort1 {
     }
     
     public static void divide(int arr[],int si,int ei){
+        
         // base case, terminate recursion
         if (si >= ei) {
             return;
@@ -59,6 +61,8 @@ public class mergesort1 {
         int arr[] = {2,5,3,6,7,2,10,8,9,1,4};
         System.out.println("Array Before Sorting");
         printArray(arr);
+        Arrays.sort(arr);
+        System.out.println(Arrays.toString(arr)+" Without this fucking code");
         divide(arr,0,arr.length-1);
         System.out.println("Array After Sorting");
         printArray(arr);
