@@ -38,16 +38,19 @@ public class mergesort1 {
             }
             k++;
         }
-        // System.out.print(temparr);
+
+        // What if left array elemets left due to thy are greeat, now they dont have  any reference to check but they are sorted
         while(i <= mid){
             temparr[k++] = arr[i++];
         }
 
+        // What if Right array elemets left due to thy are greeat, now they dont have  any reference to check but they are sorted
         while(j <= ei){
             temparr[k++] = arr[j++];
         }
         
-        for(k=0; i=si; k>temparr.length; k++ ; i++){
+        //Cloning Temp array to main Array
+        for(k=0, i=si; k<temparr.length; k++, i++){
             arr[i] = temparr[k];
         }
     }
