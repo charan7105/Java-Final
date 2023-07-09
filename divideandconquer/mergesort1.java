@@ -59,10 +59,13 @@ public class mergesort1 {
     
     public static void main(String[] args){
         int arr[] = {2,5,3,6,7,2,10,8,9,1,4};
+
         System.out.println("Array Before Sorting");
         printArray(arr);
-        Arrays.sort(arr);
-        System.out.println(Arrays.toString(arr)+" Without this fucking code");
+        
+        // Arrays.sort(arr);
+        // System.out.println(Arrays.toString(arr)+" Without this fucking code");
+
         divide(arr,0,arr.length-1);
         System.out.println("Array After Sorting");
         printArray(arr);
