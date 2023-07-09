@@ -37,6 +37,7 @@ public class rotatedarray{
                 return findIndex(arr,si,mid-1,target);
             }
         }
+        return mid;
     }
     public static void main(String[] args){
         int arr[] = {4,5,6,7,0,1,2};
