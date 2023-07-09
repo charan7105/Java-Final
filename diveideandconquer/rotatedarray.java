@@ -1,7 +1,8 @@
 package diveideandconquer;
 
 public class rotatedarray{
-    public static int findIndex(int arr[],int si,int ei,int target){
+    public static int findIndex(int arr[],int si,int ei,int target)
+    {
         //Base
         if(si>ei){
             return -1;
@@ -17,7 +18,7 @@ public class rotatedarray{
         //CASE1 
         if(arr[si]<=arr[mid]){
             //Case a
-            if(arr[si]<=target && target>= arr[ei]){
+            if(arr[si]<=target && target<= arr[ei]){
                 return findIndex(arr,si,mid-1,target);
             }
             //Case b
