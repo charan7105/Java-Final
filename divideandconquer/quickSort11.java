@@ -30,8 +30,8 @@ public class quickSort11 {
         //Swap the Pivot Element
         i++;
         int temp = Pivot;
-        Pivot = arr[i];
-        arr[i] = temp;
+        arr[ei] = arr[i];
+        arr[i] = temp; //pivot = temp
         return i;
     }
     public static void main(String[] args){
