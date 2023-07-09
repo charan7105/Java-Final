@@ -10,7 +10,7 @@ public class quickSort11 {
         }
         int Pindx = Partition(arr,si,ei); //The Pivot Element's Index after it got Arranged 
         QuickSort(arr,si,Pindx-1); //Left Side One
-        QuickSort(arr,si,Pindx-1); //Right Side One
+        QuickSort(arr,Pindx+1,ei); //Right Side One
     }
 
     public static int Partition(int arr[], int si, int ei){
