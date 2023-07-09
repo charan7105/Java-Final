@@ -18,7 +18,7 @@ public class rotatedarray{
         //CASE1 
         if(arr[si]<=arr[mid]){
             //Case a
-            if(arr[si]<=target && target<= arr[ei]){
+            if(arr[si]<=target && target<= arr[mid]){
                 return findIndex(arr,si,mid-1,target);
             }
             //Case b
@@ -41,7 +41,7 @@ public class rotatedarray{
     }
     public static void main(String[] args){
         int arr[] = {4,5,6,7,0,1,2};
-        int target = 0;
+        int target = 5;
 
         int tarIndex = findIndex(arr,0,arr.length-1,target);
         System.out.println(tarIndex);
