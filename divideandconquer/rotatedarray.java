@@ -1,4 +1,4 @@
-package diveideandconquer;
+package divideandconquer;
 
 public class rotatedarray{
     public static int findIndex(int arr[],int si,int ei,int target)
