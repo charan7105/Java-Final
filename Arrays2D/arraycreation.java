@@ -1,14 +1,12 @@
 package Arrays2D;
-import java.util.*;
-
 import java.util.Scanner;
 
 public class arraycreation {
 
     public static void print(int numbers[][]){
-        for(int i=0; i<numbers.length;i++){
-            for(int j=0; j<numbers[0].length;j++){
-                System.out.print(numbers[i][j]+ " ");
+        for(int i=0; i<numbers.length; i++){
+            for(int j=0; j<numbers[0].length; j++){
+                System.out.print(numbers[i][j] + " ");
             }
             System.out.println();
         }
@@ -16,37 +14,41 @@ public class arraycreation {
 
     public static void create(int numbers[][]){
         Scanner sc = new Scanner(System.in);
-        for(int i=0; i<numbers.length;i++){
-            for(int j=0; j<numbers[0].length;j++){
-                // System.out.print("Enter the Numbers");
+        for(int i=0; i<numbers.length; i++){
+            for(int j=0; j<numbers[0].length; j++){
+                System.out.print("Enter a number: ");
                 numbers[i][j] = sc.nextInt();
             }
         }
     }
 
-    public static boolean Find(int numbers[][], int key){
-        
-        for(int i=0;i<numbers.length;i++){
-            for(int j=0; j<numbers[0].length;j++){
+    public static int Find(int numbers[][], int key){
+        for(int i=0; i<numbers.length; i++){
+            for(int j=0; j<numbers[0].length; j++){
                 if(numbers[i][j] == key){
-                    System.out.println("Yes we found this one");
-                    return true;
+                    System.out.println("Yes, we found this key at position [" + i + "][" + j + "]");
+                    return key;
                 }
             }
         }
-        System.out.println("No we dont found this one");
-        return false;
-
+        System.out.println("No, we didn't find this key");
+        return -1;
     }
+
     public static void main(String[] args){
-        int numbers[][] = new int[3][4];
-        
         Scanner sc = new Scanner(System.in);
-        System.out.print("Enter the Key : ");
+        System.out.print("Enter the number of rows: ");
+        int rows = sc.nextInt();
+        System.out.print("Enter the number of columns: ");
+        int columns = sc.nextInt();
+        int numbers[][] = new int[rows][columns];
+
+        System.out.print("Enter the Key to search for: ");
         int key = sc.nextInt();
 
         create(numbers);
         print(numbers);
-        Find(numbers,key);
+        int result = Find(numbers, key);
+        System.out.println("Result: " + result);
     }
 }
